@@ -17,11 +17,12 @@ import static org.junit.Assert.assertEquals;
 @RunWith(Parameterized.class)
 public class AreaTest {
 
-    private static com.example.constuctor.Rectangle CONSTRUCTOR_RECTANGLE = new com.example.constuctor.Rectangle(2,3);
+    private static com.example.constuctor.Rectangle CONSTRUCTOR_RECTANGLE = new com.example.constuctor.Rectangle(2, 3);
     private static com.example.constuctor.Rectangle CONSTRUCTOR_SQUARE = new com.example.constuctor.Square(3);
     private static com.example.setter.Rectangle SETTERS_RECTANGLE;
     private static com.example.setter.Rectangle SETTERS_SQUARE;
-    static{
+
+    static {
         Rectangle settersRectangle = new com.example.setter.Rectangle();
         settersRectangle.setHeight(2);
         settersRectangle.setWidth(3);
@@ -45,14 +46,14 @@ public class AreaTest {
     private com.example.Rectangle rectangle;
     private Integer expectedValue;
 
-    public AreaTest(com.example.Rectangle classUnderTest, Integer expectedValue){
+    public AreaTest(com.example.Rectangle classUnderTest, Integer expectedValue) {
         this.rectangle = classUnderTest;
         this.expectedValue = expectedValue;
     }
 
     @Test
     public void testAreaRectangle() {
-        assertEquals(expectedValue.intValue(),rectangle.getAreaValue());
+        assertEquals(expectedValue.intValue(), rectangle.getAreaValue());
     }
 
 }
